@@ -8,7 +8,6 @@ class Persona(models.Model):
     surname = models.CharField(max_length=100)
     dni = models.CharField(max_length=8)
     date = models.CharField(max_length=50,blank=True)
-    age = models.CharField(max_length=50)
     club = models.CharField(max_length=50)
     photo = models.ImageField(
         upload_to = 'foto/%Y/%m/%d',
