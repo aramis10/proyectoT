@@ -3,14 +3,15 @@
 
     </head>
     <body>
-    	{% for persona in persona_list %}
-    	    <h2> {{ persona.nombre }} <b>{{ persona.apellido }}</b> </h2>
-    	    <p> {{ persona.nacimiento }} </p>
-            {% if persona.edad %}
-             <p> {{ persona.signo}} </p>
-             {% endif %} 
+    	{% for person in person_list %}
+    	    <h2> {{ person.name }} <b>{{ person.surname }}</b> </h2>
+        <p> {{ person.dni}} </p>
+    	    <p> {{ person.date }} </p>
+        <p  {{ person.club }} </p>
+             <p> {{ person.photo }} </p>
+             {% if person.photo %} 
            <div>
-                <img src="{{ persona.foto.url }}" alt="{{ persona.nombre }} {{persona.apellido}}">
+                <img src="{{ person.photo.url }}" alt="{{ person.name }} {{person.surname}}">
             </div>
         {% endfor %}
     </body>
